@@ -1,4 +1,4 @@
-package First;
+package First.Problems;
 public class BinarySearch {
     public int binarySearch(int[] arr , int num) {
         int right = arr.length-1;
@@ -21,8 +21,8 @@ public class BinarySearch {
         return -1;
     }
 
-    public int binarySearch(int[] arr , int num , int startInd , int endInd) {
-        System.out.println();
+    public int binarySearch(int[] arr , int num , int startInd , int endInd,int iter , String callerName) {
+        System.out.println("Iteration " + iter + " : Start Index - " + startInd + " End Index - " + endInd + " ------ Caller Method : " + callerName);
         if ( endInd < startInd ) {
             return -1;
         }
@@ -36,13 +36,15 @@ public class BinarySearch {
         else {
             startInd = mid + 1 ;
         }
-        return binarySearch(arr,num,startInd,endInd);
+        iter ++;
+        return binarySearch(arr,num,startInd,endInd,iter,"Binary Search");
     }
 
     public static void main(String[] args) {
-        BinarySearch use = new BinarySearch();
-        int[] arr = {1,2,3,4,5,6,7,8,9,10} ;
-        use.binarySearch(arr,8);
-        System.out.println(use.binarySearch(arr,8,0,arr.length-1));
+        First.BinarySearch.BinarySearch use = new First.BinarySearch.BinarySearch();
+        int[] arr = {5, 8, 12, 16, 23, 25, 30, 34, 39, 42, 49, 57, 61, 68, 73, 77, 86, 89, 95, 99} ;
+//        use.binarySearch(arr,8);
+        System.out.println();
+        System.out.println("\nThe final index or output : " + use.binarySearch(arr,16,0,arr.length-1,1,"Main"));
     }
 }
