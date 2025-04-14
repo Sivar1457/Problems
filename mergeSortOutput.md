@@ -1,4 +1,6 @@
 
+The input : [ 43 , 12 , 77 , 5 , 38 , 91 , 26 , 84 , 19 , 60 , 3 , 74 , 52 , 67 , 9 , 31 , 21 , 88 , 45 , 15 ,  ]
+
     (Separating)  [Iteration - 1 ] , Left index : 0 , Right index : 19 ------- Caller Method Name : Main
 
         (Separating)  [Iteration - 2 ] , Left index : 0 , Right index : 9 ------- Caller Method Name : separate
@@ -115,4 +117,4 @@
 
         (Merging)  [Iteration - 2 ] , Left index : 0 , Right index : 19 , Middle index : 9 ------- Caller Method Name : separate
 
-The final output : [ 3 , 5 , 9 , 12 , 15 , 19 , 21 , 26 , 31 , 38 , 43 , 45 , 52 , 60 , 67 , 74 , 77 , 84 , 88 , 91 ,  ] 
+The output : [ 3 , 5 , 9 , 12 , 15 , 19 , 21 , 26 , 31 , 38 , 43 , 45 , 52 , 60 , 67 , 74 , 77 , 84 , 88 , 91 ,  ] 

@@ -26,8 +26,8 @@ public class QuickSort {
 
     public void arrange( int[] arr , int start , int end,int iter ) {
         System.out.print("    ".repeat(iter));
-        arrPrint(arr);
-        System.out.println("    ".repeat(iter) + "Iteration : " + (iter+1) + " start - " + start + " end - " + end);
+        arrPrint(arr,"current");
+        System.out.println("    ".repeat(iter) + "Iteration : " + (iter+1) + " , start - " + start + " end - " + end);
         int k = start ;
         int pivot = arr[end];
         for ( int i = start ; i < end; i++ ) {
@@ -49,8 +49,8 @@ public class QuickSort {
         arrange( arr , (k+1 < arr.length-1 && k+1 < end) ? k+1 : k , end,iter+1 );
     }
 
-    public void arrPrint(int [] arr){
-        System.out.print("The final output : [ ");
+    public void arrPrint(int [] arr,String type){
+        System.out.print("The "+type+" : [ ");
         for ( int num : arr ) {
             System.out.print(num + " , ");
         }
@@ -62,6 +62,9 @@ public class QuickSort {
         int [] arr = {43, 12, 77, 5, 38, 91, 26, 84, 19, 60,
                 3, 74, 52, 67, 9, 31, 21, 88, 45, 15};
         QuickSort use = new QuickSort();
+        System.out.println();
+        use.arrPrint(arr,"input");
+        System.out.println();
 //        arr = new int[] {6, 3, 9, 5, 2, 8};
 //        use.arrPrint(arr);
 //        use.arrange(arr,arr.length-1);
@@ -69,7 +72,7 @@ public class QuickSort {
 //        use.arrange(arr,3);
 //        use.arrPrint(arr);
         use.arrange(arr,0,arr.length-1,0);
-        use.arrPrint(arr);
+        use.arrPrint(arr,"output");
     }
 
 }

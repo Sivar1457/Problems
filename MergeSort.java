@@ -2,8 +2,8 @@ package First.Problems;
 
 public class MergeSort {
 
-    public void arrPrint(int [] arr){
-        System.out.print("\n The final output : [ ");
+    public void arrPrint(int [] arr,String type){
+        System.out.print("\n The "+type+" : [ ");
         for ( int num : arr ) {
             System.out.print(num + " , ");
         }
@@ -48,8 +48,9 @@ public class MergeSort {
         MergeSort ms = new MergeSort();
         int [] arr = {43, 12, 77, 5, 38, 91, 26, 84, 19, 60,
                 3, 74, 52, 67, 9, 31, 21, 88, 45, 15};
+        ms.arrPrint(arr,"input");
         ms.separate(arr,0, arr.length-1,"Main",1);
-        ms.arrPrint(arr);
+        ms.arrPrint(arr,"output");
     }
 
 }
